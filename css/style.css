@@ -1,0 +1,721 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #6c747c !important;
+}
+
+/* Logo */
+
+img.navbar-logo {
+    height: 38px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+img.navbar-logo:hover {
+    opacity: 0.92;
+    transform: scale(1.02);
+}
+
+/* Navigation Menu */
+.nav {
+    padding: 8px 15px;
+    align-items: center;
+}
+
+.bg-menu {
+    background-color: #37393c !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-menu .nav-item {
+    margin: 0 4px;
+}
+
+.bg-menu .nav-link {
+    color: #c9cdd3 !important;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.bg-menu .nav-link:hover {
+    color: #272727 !important;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.bg-menu .nav-link.active {
+    color: #8e8a7e !important;
+    font-weight: 600;
+    background-color: rgb(255 255 255 / 12%));
+    border: 1px solid rgb(255 255 255 / 35%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION (Phone / Mobile screen width: <= 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+    .bg-menu {
+        position: relative;
+    }
+
+    /* Show Mobile Hamburger Button */
+    .mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background-color: #898884;
+        color: #ffc107;
+        font-size: 26px;
+        line-height: 1;
+        width: 44px;
+        height: 40px;
+        border: 1px solid rgba(255, 193, 7, 0.4);
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+        transition: all 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 1000;
+    }
+
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:focus,
+    .mobile-menu-btn.active {
+        background-color: rgba(255, 193, 7, 0.15);
+        border-color: #ffc107;
+        color: #ffc107;
+        outline: none;
+    }
+
+    /* Hide normal navigation links on mobile by default */
+    .bg-menu .nav {
+        display: none !important;
+    }
+
+    /* When mobile menu is opened, show as dropdown below the navbar */
+    .bg-menu .nav.show {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 4px);
+        right: 15px;
+        width: 220px;
+        max-width: calc(100vw - 30px);
+        background-color: #37393c !important;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        padding: 10px 8px;
+        margin: 0;
+        z-index: 99999;
+        animation: mobileDropdownFade 0.2s ease forwards;
+    }
+
+    @keyframes mobileDropdownFade {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .bg-menu .nav.show .nav-item {
+        width: 100%;
+        margin: 3px 0;
+        text-align: left;
+    }
+
+    .bg-menu .nav.show .nav-link {
+        display: block;
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #c9cdd3 !important;
+        border-radius: 6px;
+        border: 1px solid transparent;
+        text-align: left;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    .bg-menu .nav.show .nav-link:hover {
+        color: #ffc107 !important;
+        background-color: rgba(255, 255, 255, 0.08);
+        padding-left: 20px;
+    }
+
+    .bg-menu .nav.show .nav-link.active {
+        color: #ffc107 !important;
+        font-weight: 600;
+        background-color: rgba(255, 193, 7, 0.15);
+        border: 1px solid rgba(255, 193, 7, 0.35);
+    }
+}
+
+
+/*  ================================
+Video Style 
+====================================
+*/
+
+.sec-title {
+    color: #2a2d31;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+#video-sec p {
+    color: #000;
+}
+
+#video-sec {
+    background-color: #5e5f61!important;
+}
+
+
+p.jack {
+	text-align:justify;
+	color: #c9cdd3;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* ====================================
+	Text Section 
+
+========================================
+*/
+#text-sec .sec-title {
+    color: #d3d6d9;
+}
+
+/*  ================================
+Footer Style 
+====================================
+*/
+.site-footer {
+    position: relative;
+    background-image: url("../img/footer-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Dark transparent layer */
+.footer-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.78);
+}
+
+/* Keep content above overlay */
+.site-footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer headings */
+.site-footer h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.site-footer h5:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+}
+
+/* Paragraph text */
+.site-footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Links */
+.site-footer ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.site-footer ul li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* Copyright */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .site-footer {
+        text-align: center;
+    }
+
+    .site-footer h5:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* About Section */
+.about-section {
+    background: #31353a;
+    min-height: 100vh;
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-section .container {
+    max-width: 1540px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 775px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about-content {
+    padding-left: 25px;
+    color: white;
+}
+
+.about-content h1 {
+    font-size: 62px;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.about-content h1 span {
+    color: #b78bc9;
+}
+
+.about-content p {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+.journey-btn {
+    display: inline-block;
+    padding: 18px 38px;
+    border: 2px solid #6a5acd;
+    border-radius: 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.journey-btn:hover {
+    color: white;
+    text-decoration: none;
+    background: #6a5acd;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-image img {
+        height: 550px;
+    }
+
+    .about-content {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+
+    .about-content h1 {
+        font-size: 45px;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-content h1 {
+        font-size: 35px;
+    }
+
+    .about-content p {
+        font-size: 17px;
+    }
+```css
+/* =========================================================
+   PORTFOLIO PAGE ONLY
+   All styles are scoped under .portfolio-page
+   ========================================================= */
+
+
+/* ---------- Portfolio Page Background ---------- */
+
+.portfolio-page {
+    background-color: #2a2d31;
+    color: #eceef0;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+
+/* ---------- Hero Section ---------- */
+
+.portfolio-page .portfolio-hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #33404d 0%, #23262a 100%);
+    color: #ffffff;
+    padding: 70px 0;
+}
+
+.portfolio-page .portfolio-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.portfolio-page .portfolio-hero p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.portfolio-page .portfolio-hero .badge {
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px 18px;
+}
+
+.portfolio-page .portfolio-hero .btn {
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 500;
+}
+
+
+/* ---------- Hero Image ---------- */
+
+.portfolio-page .hero-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- General Section ---------- */
+
+.portfolio-page section {
+    width: 100%;
+}
+
+.portfolio-page .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #eceef0;
+}
+
+.portfolio-page .section-subtitle {
+    color: #a8adb4;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.portfolio-page .text-muted {
+    color: #a8adb4;
+}
+
+
+/* ---------- About / Skill Boxes ---------- */
+
+.portfolio-page .skill-box {
+    background-color: #3a3e44;
+    border-radius: 15px;
+    padding: 30px 25px;
+    text-align: center;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.portfolio-page .skill-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-page .skill-box h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.portfolio-page .skill-box h5 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.portfolio-page .skill-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* ---------- Projects Section ---------- */
+
+.portfolio-page #projects {
+    background-color: #24262a;
+}
+
+.portfolio-page .project-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #34383d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.portfolio-page .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-page .project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-page .project-card .card-body {
+    padding: 25px;
+}
+
+.portfolio-page .project-card .card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.portfolio-page .project-card .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.portfolio-page .project-card .badge {
+    margin-right: 4px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+.portfolio-page .project-card .btn {
+    border-radius: 7px;
+    padding: 9px 18px;
+    font-weight: 500;
+}
+
+
+/* ---------- Technical Skills ---------- */
+
+.portfolio-page .technical-skills {
+    background-color: #31353a;
+}
+
+
+/* ---------- CTA Section ---------- */
+
+.portfolio-page .cta-section {
+    background: linear-gradient(135deg, #26292c 0%, #34383d 100%);
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 60px 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-page .cta-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.portfolio-page .cta-section p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+}
+
+.portfolio-page .cta-section .btn {
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-weight: 600;
+}
+
+
+/* ---------- Portfolio Links ---------- */
+
+.portfolio-page a {
+    transition: all 0.3s ease;
+}
+
+
+/* ---------- Mobile Responsive ---------- */
+
+@media (max-width: 991.98px) {
+
+    .portfolio-page .portfolio-hero {
+        padding: 60px 0;
+    }
+
+    .portfolio-page .portfolio-hero h1 {
+        font-size: 3rem;
+    }
+
+    .portfolio-page .hero-image {
+        margin-top: 35px;
+        height: 320px;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .portfolio-page .portfolio-hero {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .portfolio-page .portfolio-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .portfolio-page .portfolio-hero p {
+        font-size: 1rem;
+    }
+
+    .portfolio-page .hero-image {
+        height: 280px;
+        margin-top: 30px;
+    }
+
+    .portfolio-page .section-title {
+        font-size: 1.9rem;
+    }
+
+    .portfolio-page .cta-section {
+        padding: 45px 20px;
+        border-radius: 18px;
+    }
+
+    .portfolio-page .cta-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .portfolio-page .portfolio-hero h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio-page .hero-image {
+        height: 230px;
+        border-radius: 15px;
+    }
+
+    .portfolio-page .project-card img {
+        height: 200px;
+    }
+
+    .portfolio-page .skill-box {
+        padding: 25px 18px;
+    }
+
+    .portfolio-page .cta-section .btn {
+        width: 100%;
+    }
+}
+```

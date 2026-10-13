@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 44" width="210" height="44" fill="none">
+    <defs>
+        <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#38bdf8" />
+            <stop offset="50%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#a855f7" />
+        </linearGradient>
+        <linearGradient id="amberGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fde047" />
+            <stop offset="100%" stop-color="#f59e0b" />
+        </linearGradient>
+        <linearGradient id="badgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2a2e34" />
+            <stop offset="100%" stop-color="#1b1e22" />
+        </linearGradient>
+        <filter id="shadowFilter" x="-15%" y="-15%" width="130%" height="130%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.4" />
+        </filter>
+    </defs>
+    
+    <!-- Emblem Box -->
+    <g filter="url(#shadowFilter)">
+        <rect x="2" y="2" width="40" height="40" rx="10" fill="url(#badgeBg)" stroke="url(#neonGradient)" stroke-width="1.8" />
+        
+        <!-- Modern Tech Icon: Code bracket & Monogram node -->
+        <path d="M 16 15 L 10 22 L 16 29" stroke="#38bdf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M 28 15 L 34 22 L 28 29" stroke="#c084fc" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M 24 14 L 20 30" stroke="url(#amberGold)" stroke-width="2.4" stroke-linecap="round" />
+        <circle cx="22" cy="22" r="2" fill="#ffffff" />
+    </g>
+    
+    <!-- Brand Typography -->
+    <!-- Brand Name -->
+    <text x="52" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="1.5" fill="#f8fafc">
+        JACKS<tspan fill="url(#amberGold)">.</tspan><tspan fill="#38bdf8" font-size="13" font-weight="700" letter-spacing="1.2">DEV</tspan>
+    </text>
+    
+    <!-- Tagline -->
+    <text x="53" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="600" letter-spacing="2.2" fill="#94a3b8">MASTER TOUFIK</text>
+</svg>
